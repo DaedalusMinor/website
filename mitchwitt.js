@@ -4,7 +4,12 @@ window.onload = function()
 	ctx=canvas.getContext("2d");
 	canvas.width=window.innerWidth;
 	canvas.height=window.innerHeight;
-	main();
+	if(window.innerHeight > window.innerWidth){
+		window.location.href = "mobileindex.html";
+	}
+	else{
+		main();
+	}
 }
 
 function main(){
