@@ -5,7 +5,7 @@ window.onload = function()
 	canvas.width=window.innerWidth;
 	canvas.height=window.innerHeight;
 	if(window.visualViewport.heightt > window.visualViewport.width){
-		window.location.href = "mobileindex.html";
+		window.location.href = "Mobile/mobileindex.html";
 	}
 	else{
 		main();
