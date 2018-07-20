@@ -4,8 +4,8 @@ window.onload = function()
 	ctx=canvas.getContext("2d");
 	canvas.width=window.innerWidth;
 	canvas.height=window.innerHeight;
-	if(window.visualViewport.heightt > window.visualViewport.width){
-		window.location.href = "mobileindex.html";
+	if(window.innerWidth < 1000){
+		window.location.href = "Mobile/mobileindex.html";
 	}
 	else{
 		main();
@@ -20,6 +20,7 @@ function main(){
 	ctx.globalAlpha = 0.6;
 	ctx.fillStyle = 'black';
 	ctx.fill();
-	ctx.fillStyle = "white";
 	ctx.globalAlpha = 1.0;
+	ctx.fillText(""+ window.innerWidth, window.innerWidth - 100, 90);
+	ctx.fillText(""+ window.innerHeight, window.innerWidth - 100, 150);
 }
