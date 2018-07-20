@@ -20,6 +20,6 @@ function main(){
 	ctx.globalAlpha = 0.6;
 	ctx.fillStyle = 'black';
 	ctx.fill();
-	ctx.fillStyle = "white";
+	ctx.fillStyle = 'white';
 	ctx.globalAlpha = 1.0;
 }
