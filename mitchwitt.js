@@ -21,6 +21,6 @@ function main(){
 	ctx.fillStyle = 'black';
 	ctx.fill();
 	ctx.globalAlpha = 1.0;
-	ctx.fillText(""+ window.innerWidth, window.innerWidth - 100, 90);
-	ctx.fillText(""+ window.innerHeight, window.innerWidth - 100, 150);
+	//ctx.fillText(""+ window.innerWidth, window.innerWidth - 100, 90);
+	//ctx.fillText(""+ window.innerHeight, window.innerWidth - 100, 150);
 }
