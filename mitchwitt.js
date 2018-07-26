@@ -11,6 +11,14 @@ window.onload = function()
 		main();
 	}
 }
+var i = 0; 			// Start Point
+var images = [];	// Images Array
+var time = 3000;	// Time Between Switch
+	 
+// Image List
+images[0] = "Gallery/pics/analemma-black.PNG";
+images[1] = "Gallery/pics/cardioid-right-white.PNG";
+images[2] = "Gallery/pics/lemniscate-black.PNG";
 
 function main(){
 	ctx.moveTo(0,0);
@@ -21,6 +29,21 @@ function main(){
 	ctx.fillStyle = 'black';
 	ctx.fill();
 	ctx.globalAlpha = 1.0;
-	ctx.fillText(""+ window.innerWidth, window.innerWidth - 100, 90);
-	ctx.fillText(""+ window.innerHeight, window.innerWidth - 100, 150);
+	changeImg();
+}
+
+function changeImg(){
+	document.slide.src = images[i];
+
+	// Check If Index Is Under Max
+	if(i < images.length - 1){
+	  // Add 1 to Index
+	  i++; 
+	} else { 
+		// Reset Back To O
+		i = 0;
+	}
+
+	// Run function every x seconds
+	setTimeout("changeImg()", time);
 }
