@@ -16,9 +16,9 @@ var images = [];	// Images Array
 var time = 3000;	// Time Between Switch
 	 
 // Image List
-images[0] = "Gallery/pics/analemma-black.PNG";
-images[1] = "Gallery/pics/cardioid-right-white.PNG";
-images[2] = "Gallery/pics/lemniscate-black.PNG";
+images[0] = "Gallery/pics/analemma-black.png";
+images[1] = "Gallery/pics/cardioid-right-white.png";
+images[2] = "Gallery/pics/lemniscate-black.png";
 
 function main(){
 	ctx.moveTo(0,0);
