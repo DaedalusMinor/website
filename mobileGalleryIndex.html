@@ -1,0 +1,179 @@
+<html>
+	<head>
+	<title>Picture Gallery</title>
+	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<style>
+		
+			h1 {
+				text-align: center;
+				background-color: #555;
+				font-size: 80px;
+				color: white;
+			}
+			
+			.rectangle{
+				height: 1500px;
+				width: 100%;
+				background-color: #555;
+				color: white;
+				font-style: white;
+				font-size: 50px;
+				font-family: Arial, sans-serif;
+			}
+			
+			body {
+				background-image: url("mobileBack.png");
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				background-color: #cccccc;
+				background-attachment: fixed;
+				height:window.innerHeight;
+				width:window.innerWidth;
+			}
+			
+			.block {
+				background-color: Black; 
+				position: absolute;
+				border: none; /* Remove borders */
+				color: white; /* White text */
+				height: 65px;
+				width: 300px;
+				font-size: 17px; /* Set a font size */
+				cursor: pointer; /* Mouse pointer on hover */
+				letter-spacing: 2px;
+
+				font-family: Arial, sans-serif;
+			}
+			
+			.image{
+				position:absolute; 
+				width:300px; 
+				height:150px; 
+			}
+			
+			.col1{
+				left: 20px;
+			}
+			
+			.col2{
+				left: 340px;
+			}
+			
+			.col3{
+				left: 660px;
+			}
+			
+			.toprowimg{
+				top: 1950px;
+			}
+
+			.toprowbutton{
+				top:2120px;
+			}
+			
+			.middlerowimg1{
+				top: 2200px;
+			}
+			
+			.middlerowbutton1{
+				top:2370px;
+			}
+			
+			.middlerowimg2{
+				top: 2450px;
+			}
+			
+			.middlerowbutton2{
+				top:2620px;
+			}
+			
+			.bottomrowimg{
+				top:2700px;
+			}
+			
+			.bottomrowbutton{
+				top: 2870px;
+			}
+			
+			.block:hover {
+				background-color: DimGray;
+			}
+			
+			.whiteimg{
+				border: 2px solid #ddd;
+			}
+			
+			.about{
+				margin-left: 20px;
+				margin-right:20px;
+			}
+
+		</style>
+	</head>
+<body>
+	<canvas id="canvas" width="0" height="0"></canvas>
+	
+	<h1>About
+	<form>
+	<button formaction = "../index.html" style="
+				background-color: #555;
+				border-radius: 100%;
+				position: relative;
+				margin-top: -105px;
+				margin-left: -520px;
+				border: 4px solid white;  
+				color: white; 
+				height: 150px;
+				width: 150px;
+				font-size: 25px; 
+				cursor: pointer;"><i class="fa fa-arrow-left"></i></button>
+			</form>
+		<img src="mitchprof.PNG" style="position:relative; width:150px; height:150px; border-radius:50%; margin-top:-230px; margin-right: -520px; border:3px solid blue;"></img>
+	</h1>
+	<div class = "rectangle">
+	
+		<div class = "about" style="margin-right:30px; margin-left:30px;">
+		<br></br>
+		These are just some drawings that I've made through JavaScript, the code should viewable on my GitHub.  These are all just graphs of polar functions, which I think look cool
+		and have good mathematical meaning.  The cardioid, for instance, is made simply by having one circle roll around another, and tracing a specific point on the outer circle.  
+		They're also formed by time table circles and the mandelbrot set.  And I just think that the lemniscate should
+		be saved from the wrists of 22-year-old white women.  All of these were a challenge, because I had to use the Cartesian Coordinate system (x and y), instead of  a 
+		polar coordinate system (radius and angle).  So yeah, use them as backgrounds or something.
+		</div>
+		
+	</div>
+	
+				
+	<img class="image toprowimg col1" src = "analemma-black.png"></img>
+	<a href = "analemma-black.png" > <button class="block toprowbutton col1" type="submit">Analemna-Black</button></a>
+	<img class="image toprowimg whiteimg col2" src = "analemma-white.png"></img>
+	<a href = "analemma-white.png" > <button class="block toprowbutton col2" type="submit">Analemna-White</button></a>
+	<img class="image toprowimg col3" src = "lemniscate-black.png"></img>
+	<a href = "lemniscate-black.png" > <button class="block toprowbutton col3" type="submit" >Lemniscate-Black</button></a>
+	
+	<img class="image middlerowimg1 whiteimg col1" src = "lemniscate-white.png"></img>
+	<a href = "lemniscate-white.png" > <button class="block middlerowbutton1 col1" type="submit">Lemniscate-White</button></a>
+	<img class="image middlerowimg1 col2" src = "cardioid-right-black.png"></img>
+	<a href = "cardioid-right-black.png" > <button class="block middlerowbutton1 col2" type="submit">Cardioid1-Black</button></a>
+	<img class="image middlerowimg1 whiteimg col3" src = "cardioid-right-white.png"></img>
+	<a href = "cardioid-right-white.png" > <button class="block middlerowbutton1 col3" type="submit">Cardioid1-White</button></a>
+	
+	<img class="image middlerowimg2 col1"  src = "cardioid-black.png"></img>
+	<a href = "cardioid-black.png" > <button class="block middlerowbutton2 col1" type="submit">Cardioid2-Black</button></a>
+	<img class="image middlerowimg2 whiteimg col2" src = "cardioid-white.png"></img>
+	<a href = "cardioid-white.png" > <button class="block middlerowbutton2 col2" type="submit">Cardioid2-White</button></a>
+	<img class="image middlerowimg2 whiteimg col3" src = "white-right.png"></img>
+	<a href = "white-right.png" > <button class="block middlerowbutton2 col3" type="submit">Lemniscate-Right</button></a>
+	
+	<img class="image bottomrowimg col1" src = "lemniscateHorizontal.png"></img>
+	<a href = "lemniscateHorizontal.png" > <button class="block bottomrowbutton col1" type="submit">Failed-Logo</button></a>
+	<img class="image bottomrowimg col2"  src = "phoneLemniscate.png"></img>
+	<a href = "phoneLemniscate.png" > <button class="block bottomrowbutton col2" type="submit">Lemni-Phone-Back</button></a>
+	<img class="image  bottomrowimg col3" src = "lemniscate-background.png"></img>
+	<a href = "lemniscate-right.png" > <button class="block bottomrowbutton col3" type="submit" >Lemniscate-Desktop</button></a>
+	
+
+</body>
+</html>
