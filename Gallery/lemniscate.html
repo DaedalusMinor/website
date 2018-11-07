@@ -1,0 +1,254 @@
+<html>
+<head>
+	<title>Polar Graphs - Lemniscate</title>
+	<meta name="viewport">
+	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+
+ul {
+	position: absolute;
+	list-style-type: none;
+	width: 95%;
+	top: 0px;
+	height: 350px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	
+}
+
+li a {
+	font-size: 20px;
+	font-family: Arial, sans-serif;
+	letter-spacing: 3px;
+	float: right;
+	display: block;
+	color: black;
+	padding: 290px 50px;
+	text-decoration: none;
+}
+
+li a:hover {
+	color: orange;
+}
+
+#backbutton {
+	background-color: white;
+	border-radius: 100%;	
+	border: 5px solid white;  
+	color: black; 
+	height: 50px;
+	width: 50px;
+	position: relative;
+	top: 275px;
+	left: 90px;
+	font-size: 50px; 
+	cursor: pointer; 
+	float: left;
+	display: block;
+}
+
+#backbutton:hover {
+	color: orange;
+}
+
+#line{
+	width: 96%;
+	margin-left: 2%;
+	margin-right: 2%;
+	border: 2px solid black;
+	height: 4px;
+}
+p {
+    display: block;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.component{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	padding: 3em;
+	background: url("pics/opaque.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+}
+
+.content{
+	padding: 1em;
+	background-color: white;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+</style>
+</head>
+<body>
+
+<div class = "component">
+		
+<div class = "content">
+<img src = "pics/header.png" style = "margin-right: 25%; margin-left: 25%; height: 220px; width: 50%;"></img>
+<img src="mitchprof.PNG" style="position:absolute; width:95px; height:95px; border-radius:50%; top:60px; left:800px; border:3px solid blue;"></img>
+<br>
+<br>
+<br>
+<br>
+
+<div id = "line"></div>
+
+<p align = "center">
+	<font face = "arial" size = "12">
+		The Lemniscate
+	</font>
+</p>
+
+<p align = "center">
+	<img height = "400px" width = "800px" style = "" src = "pics/lemniscate-white.png">
+</p>
+
+
+<p align = "center">
+	<font face = "arial" size = "6">
+		Some Background
+	</font>
+</p>
+
+<p align = "left">
+	<font face = "arial" size = "5">
+	The Lemniscate  <img src = "pics/tarot.jpg" height = "300px" align = "right" style="">  is commonly known as the infinity symbol, representing eternity and balance.  It's direct origins 
+	are unknown; our earliest records date back to ancient Egypt
+	and the Tibetan ouroboros.  The western use of the Lemniscate had existed mostly in religious paintings, usually on a Latin Cross.
+	But it's mathematical meaning comes from John Wallis, a 17th century mathematician, who used it to represent variables that grow arbitrarily large.  It came up
+	again in the 17th century when Jakob Bernoulli made a mathematically defined graph of the lemniscate by inverse transforming a hyperbola.
+	Now, we still retain the spiritual interpretation of the infinity symbol: on tattos on the wrists of 22-year-old white women and tarot card characters.
+	But I want to get into the mathematical meaning of the Lemniscate, and I want to make it more intuitive.  After this, I think that understanding the
+	math behind this symbol, will introduce a greater appreciation for its meaning.
+	</font>
+</p>
+
+<br>
+
+<p align = "center">
+	<font face = "arial" size = "6">
+		The Math: a Polar Look
+	</font>
+</p>
+
+<p align = "left">
+	<font face = "arial" size = "5">
+		Not wanting to scare anybody off who isn't confident with their math skills, I chose to explain the polar definition of the lemniscate first.  Although it requires more
+		knowledge, the polar equation is much less cluttered than the rectangular definition, and, I think, is more intuitive.  If you don't know what
+		polar expressions are, they're basically equations graphed on a different coordinate grid, which uses radius (r) and angle (theta or &theta;) rather than a horizontal (x) and vertical (y) axis.
+		So you can imagine "wrapping" the x-axis of a grid around the origin, taking the angles from the original horizontal x-axis to points on the new circular axis.  Then, you can pivot the y-axis
+		around the origin to have a sort of "output" at different angles.  I would suggest looking at <a href = "https://www.youtube.com/watch?v=r0fv9V9GHdo">this video</a> for a better explanation.
+		<br><br>
+		Now, in academia, you will be given this formula, <img src="pics/polareq.jpg"></img> for the definition of a lemniscate and be told to memorize it.  But I will try to make it more intuitive,
+		simply by re-expressing it, and using a little bit of trigonometric reasoning and visualization.
+		<br><br>
+		If we just take the square root of both sides, we get:
+	</font>
+</p>
+<p align = "center"><img src = "pics/polareq2.jpg"></img></p>
+<p align = "left"><font face = "arial" size = "5">Then we can take the square root of that pesky constant <i>a<sup>2</sup></i> to get:</font></p>
+<p align = "center"><img src = "pics/polareq3.jpg"></img></p>
+<p align = "left"><font face = "arial" size = "5">So what about that <i>cos(2&theta;)</i>?  That doesn't really seem intuitive.  But we can re-express it as something else to help with understanding 
+	what this means.  We know from our basic trig classes that
+	</font>
+</p>
+<p align = "center"><img src = "pics/cosex.jpg"></img></p>
+<p align = "left"><font face = "arial" size = "5">Picking one of those, we can use substitution to get a better looking function:</font></p>
+<p align = "center"><img src = "pics/polareq4.jpg"></img></p>
+<p align = "left"><font face = "arial" size = "5">This is the heart of the function.  The actual part of our expression that causes the graph to actually change.  Why does this help us understand the lemniscate?  
+	Just look at the graphs of <font color="red">cos<sup>2</sup>&theta;</font> and <font color = "blue">sin<sup>2</sup>&theta; </font></p>
+<p align="center"><img src = "pics/graph.jpg" style = "border: 3px solid gray;"></img></p>
+<p align="left"><font face = "arial" size = "5">Looking at the graph, we can see that <font color="red">cos<sup>2</sup>&theta;</font> increases as <font color = "blue">sin<sup>2</sup>&theta; </font>  decreases
+	and vice versa.  They intersect at a point in which &theta; = &pi;/4, 3&pi;/4 in the interval [0, 2&pi;], making their differences zero.  Looking at these graphs, you can consider
+	these forces as repulsive, always going in a different direction from each other.  It's apparent that these graphs can be interpreted as having a push-pull dynamic that keep 
+	both <font color="red">cos<sup>2</sup>&theta;</font> and <font color = "blue">sin<sup>2</sup>&theta; </font>  in equilibrium.<br>
+	<br>
+	So imagine these two identities as forces, acting on each ends of a bungie cord, the center of which is at a fixed point.  The farther they get from each other, the more they tug in opposite directions of each
+	other.  At the very end of the graph, the pull from the tension on the bungie cord becomes too great, and the two forces start sliding to each other, meet at the center, and then repeat their tug
+	in the opposite direction. Basically combine the two below.  </font></p>
+<p align="center"><img src="pics/tug.gif"></img> &nbsp &nbsp &nbsp  <img src="pics/lemniscateline.png"></img></p>
+<p align="left"><font face = "arial" size = "5">As for the sqaure root, that just limits the graph to two pedals, instead of two, and makes the intersection of the graph smoother.
+	Here we can see <img src="pics/sqrt.jpg"></img> <font color = "blue">(Blue)</font> and <img src="pics/nosqrt.jpg"></img> <font color = "red">(Red)</font> compared with each other</font></p>
+	<p align= "center"><img src="pics/polarcomparison.jpg"></img></p>
+	<br>
+<p align="center"><font face="arial" size="6">The Math: an Implicit Look</font></font>
+<p align="left"><font face = "arial" size="5">When I'm talking about the lemniscate, I mean the lemniscate of Bernoulli. The Lemniscate, in this situation,
+	would be created implicitly, the same way we make circles and hyperbolas are constructed.  Implicit functions are usually constructed through using some defined constant, and
+	finding all possible values of the variables that satisfy this constant.  This is like a shotgun blast of an equation, seeing where our expression equals the constant and where it
+	does not.  If you wanna see more look at <a href="https://www.youtube.com/watch?v=xIPSdWbrVKU">this video</a> for a detailed explanation on implicit functions.  Now, lets continue on a rectangular (x and y) expression
+	of the lemniscate.  
+	<br>
+	<br>
+	Ryan Byrd's <i><a href="http://jwilson.coe.uga.edu/EMAT6680Su06/Byrd/Assignment%20One/RBAssignment1.html">Fun with Lemniscates</a></i> is the basis of this lesson, I
+	would recommend seeing his webpage.  So, lets say we have two circles.  As we know, circles are implicit functions, because an expression of x and y is set to some constant, 
+	which is the square of its radius: (x - k)<sup>2</sup> + (y - h)<sup>2</sup> = r<sup>2</sup>.  The <i>k</i> and <i>h</i> are simply just shifts in the x and y direction:
+	shifting the circle k units right and h units up.  Lets look at two arbitrary circles of equal radius below.</font></p>
+	<p align = "center"><img src="pics/circles.jpg"></img></p><br>
+	<p align = "left"><font face="arial" size="5">If we just "squish" these two together, it's visible that we can get a lemniscate.  Just eyeing the
+	graph, we can see that there are two possible additive operations we can use to smush the two circles together: addition and multiplication.  This is just my caveman logic, but lets go through
+	with it anyways. Wanting to save time, I will tell you right now that Byrd did a lot of the work for me, and he finds that adding the square root of the circles and setting them to some constant will
+	just yield an oval.  At some values the oval will not even show up, meaning that there are no real values to the variables that satisfy the "condition" or value
+	the expression is set equal to.  As we can see, for these circles, any integer value equal to or below 6 will be null.
+	</font></p>
+	<br>
+	<p align="center"><img src="pics/ovals.jpg"></img></p>
+	<p align="left"><font face="arial" size="5">This is the first time I have ever been disappointed by an oval.  But I have one more operation to try: multiplication.
+	If we take the square root expression of the circles, multiply them together, and experiment with different values, we'll see a pattern.
+	</p></font>
+	<p align="center"><img src="pics/peanutboi.jpg"></img></p>
+	<p align="left"><font face="arial" size="5">It seems that the shape of the lemniscate formed between the values of 9 and 7. I'll start to look in between those two values.</font></p>
+	<p align="center"><img src="pics/squishedcircles.jpg"></img></p>
+	<p align="left"><font face="arial" size="5">The constant value of 8 will give us our pure lemniscate shape.  Now it's time to boil this down to a general expression. If you look at
+	centers of the original circles, and found their distances from the midpoint, or the origin, you would get</font></p>
+	<p align="center"><img src="pics/distance.jpg"></img></p>
+	<p align="left"><font face="arial" size="5">This would be equivalent for the center of the other circle, since we're examining the distance from the midpoint.  This would be logical,
+	since &radic;8 * &radic;8 = 8, allowing the graph to intersect at the origin.  So we'll call our distances or "radii" <i>a</i> and our expression equal to <i>a<sup>2</sup></i>.
+	The horizontal lemniscate can be simply expressed as <img src="pics/implieqn1.jpg"></img>.  Which can be re-expressed as <img src="pics/implieqn2.jpg"></img>, giving us
+	Bernoulli's formal definition of a horizontal lemniscate.  This is actually the equation used to make the polar expression of the lemniscate</font></p>
+	<br>
+	<p align = "center"><font face = "arial" size="6">Notable Mentions</font></p>
+	<p align = "left"><font face = "arial" size = "5"><img src="pics/geronopic.jpg" align="right">There are many other ways to create a lemniscate.  Each of them having a beautiful geometric proof or a different shape
+	from Bernoulli's definition.
+	<br><br>
+	The Lemniscate of Gerono is expressed as the zero set of <img src="pics/gerono.jpg"></img>, looking like this bow tie shape.  It can also be created by Vivani's curve,
+	which is the intersection of a sphere by a cylinder, in which the surfaces of the two shapes have a tangent point.  We take the intersection shape of the cylinder and sphere and
+	project it on a 2D plane, yielding Gerono's lemniscate.
+	</font></p>
+	<p align = "center"><img src="pics/vivani.png" height = "300px"></img></p>
+	<p align = "left"><font face = "arial" size="5">Another way to create the Lemniscate of Bernoulli is through an <a href = "https://en.wikipedia.org/wiki/Inverse_curve">inverse transformation</a>
+	of a hyperbola.  This requires some knowledge in inversive geometry: in other words, I can't help you here.  But hey, look at this neat little gif.</font></p>
+	<p align = "center"><img src="pics/lemniscate.gif"></img></p>
+	<p align = "left"><font face = "arial" size="5">Watt's curve is given as <img src="pics/watteqn.jpg"></img> and yields some of the following constructions</font></p>
+	<p align = "center"><img src="pics/wattscurve1.gif"></img><img src = "pics/wattscurve2.gif"></img></p>
+	<p align = "center"><font face = "arial" size="6">Why the Lemniscate</font></p>
+	<p align = "left"><font face = "arial" size="5"><img align = "right" height = "200px" style = "border: 3px solid gray;" src = "pics/holt.jpg"></img>I first heard about the lemniscate from a work of Simeon ten Holt's called <a href="https://www.youtube.com/watch?v=0xer7LIwJ-I&t=6425s">
+	"Lemniscaat"</a>, meaning lemniscate in Dutch.  
+	I've never cried from a song before, but this one brought me pretty close.  After finding the meaning of the title, I became pretty fascinated with the lemniscate and
+	other polar graphs, just because of all the strange shapes you could get by changing a formula minimally.  I had an idea of making minimalist backgrounds out of them, just because
+	their sleek, modern look.  I also had the idea of making a website at the same time, so I smushed them together to make whatever this is.  Hope you appreciate it though!
+	</p></font>
+	</div>
+</div>
+	<ul>
+
+		<li><a>Analemma</a></li>
+		<li><a>Rose Curve</a></li>
+		<li><a>Cardioid</a></li>
+		<li><a href = "lemniscate.html">Lemniscate</a></li>
+		<form>
+			<button id = "backbutton" formaction = "../index.html"><i class="fa fa-arrow-left"></i>
+			</button>
+		</form>
+	</ul>
+</body>
+</html>
