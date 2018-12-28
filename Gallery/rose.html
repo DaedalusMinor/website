@@ -1,0 +1,197 @@
+<html>
+   <head>
+      <title>Polar Graphs - Cardioid</title>
+      <meta name="viewport">
+      <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <style>
+         ul {
+         position: absolute;
+         list-style-type: none;
+         width: 95%;
+         top: 0px;
+         height: 350px;
+         margin: 0;
+         padding: 0;
+         overflow: hidden;
+         }
+         li a {
+         font-size: 20px;
+         font-family: Arial, sans-serif;
+         letter-spacing: 3px;
+         float: right;
+         display: block;
+         color: black;
+         padding: 290px 50px;
+         text-decoration: none;
+         }
+         li a:hover {
+         color: orange;
+         }
+         #backbutton {
+         background-color: white;
+         border-radius: 100%;	
+         border: 5px solid white;  
+         color: black; 
+         height: 50px;
+         width: 50px;
+         position: relative;
+         top: 275px;
+         left: 90px;
+         font-size: 50px; 
+         cursor: pointer; 
+         float: left;
+         display: block;
+         }
+         #backbutton:hover {
+         color: orange;
+         }
+         #line{
+         width: 96%;
+         margin-left: 2%;
+         margin-right: 2%;
+         border: 2px solid black;
+         height: 4px;
+         }
+         p {
+         display: block;
+         margin-left: 2em;
+         margin-right: 2em;
+         }
+         .component{
+         position: absolute;
+         left: 0px;
+         top: 0px;
+         padding: 3em;
+         background: url("pics/opaque.jpg");
+         background-position: center;
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         }
+         .content{
+         padding: 1em;
+         background-color: white;
+         background-size: 100% 100%;
+         background-repeat: no-repeat;
+         }
+      </style>
+   </head>
+   <body>
+      <div class = "component">
+         <div class = "content">
+            <img src = "pics/header.png" style = "margin-right: 25%; margin-left: 25%; height: 220px; width: 50%;"></img>
+            <img src="mitchprof.PNG" style="position:absolute; width:95px; height:95px; border-radius:50%; top:60px; left:800px; border:3px solid blue;"></img>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div id = "line"></div>
+            <p align = "center">
+               <font face = "arial" size = "12">
+               The Rose Curve
+               </font>
+            </p>
+            <p align = "center">
+               <img height = "400px" width = "800px" style = "" src = "pics/rose/rose.PNG">
+            </p>
+			
+            <p align = "center">
+               <font face = "arial" size = "6">
+               The Math
+               </font>
+            </p>
+			
+			<p align = "left">
+				<font face = "arial" size = "5">
+				Before, we talked about how the cosine function represents the horizontal component of a right triangle in the unit circle.  
+				</font>
+			</p>
+			
+			<p align = "center"><img src = "pics/cardioid/circle-anim.gif"></img></p>
+			<p align = "left">
+				<font face = "arial" size = "5">
+				The shape will be an offset circle on the polar grid.  This makes sense, since cos(&theta;) will be negative once it reaches 
+				an angle input of &pi;/2 until 3&pi;/2, so whenever the input angle points left of the origin, the radius will be negative, thus making 
+				it point right.
+				</font>
+			</p>
+			<br>
+			<p align = "center"><img src = "pics/cardioid/cos-anim.gif"></img></p>
+			
+			<p align = "left">
+				<font face = "arial" size = "5">
+				But how do we make multiple petals?  It’s rather easy: remember radial scaling from the cardioid lesson?  Me neither, we’re gonna 
+				go through it again.  So, as you radially scale something up, you change its number of revolutions in the polar grid.  Since most 
+				trigonometric identities occur within a cycle of 0 to 2&pi;, that is how the polar grid is constructed.  But if you add some coefficient,
+				lets say <i>n</i>, > 1 to the input, then you allow more revolutions within the domain of [0, 2&pi;].  An analogy can be drawn between 
+				this and horizontal stretching/shrinking, which is usually covered in middle school/early high school.
+				</font>
+			</p>
+			<br>
+			
+			<p align = "center"><img style = "width: 400px; height: 400px;" src = "pics/rose/shrink-anim.gif"></img> <img style = "width: 400px; height: 400px;" src = "pics/rose/stretch-anim.gif"></img></p>
+			
+			<p align = "left">
+				<font face = "arial" size = "5">
+				So if we radial scale the cosine function up, then we get more petal curves smushed into the grid.  For this we’ll say that the 
+				formula we’re dealing with here is <i>r = cos(n&theta;)</i>, n representing the coefficient of scaling.  If n is an integer &ge; 1, we get 
+				rose-petal curve with <i>n</i> or 2<i>n</i>petals.
+				</font>
+			</p>
+			
+			<p align = "center"><img style = "width: 550px; height: 200px;" src = "pics/rose/3-rose.PNG"></img><img style = "width: 500px; height: 200px;" src = "pics/rose/8-rose.PNG"></img></p>
+			
+			<p align = "left">
+				<font face = "arial" size = "5">
+				But wait, why do we get <i>n</i> petals where <i>n</i> is odd and 2<i>n</i> petals where <i>n</i> is even?  Well, when you look at range of
+				values for <i>n</i> continuously, you will see a pattern forming in which a regular rose-curve will not appear as a short piece of wire, but rather
+				a stacked mesh that can be deformed.  These mesh-like formations come from when we have a non-integer radial scaling factor.  
+				</font>
+			</p>
+			
+			<p align = "center"><img src = "pics/rose/rose-anim.gif"></img></p>
+			
+			<p align = "left">
+				<font face = "arial" size = "5">
+				I try to reason this by thinking of fractional scaling as causing a fractional/incomplete revolution and the curve is in transition from one integer to the next.
+				All we need to do to make this rotation complete is to multiply <i>n</i> by some coefficient (<i>c</i>) such that <i>c * n</i> equals an integer.  For instance,
+				if we <i>allow</i> a curve with <i>n</i> = 7/3 to keep revolving its wire mesh <i>c</i> = 3 times, then we will get an <i>n</i> = 3 * 7/3 = 7 curve.
+				</font>
+			</p>
+			
+			<p align = "center"><img style = "width: 550px; height: 250px;" src = "pics/rose/fractional-rose.PNG"></img><img style = "width: 550px; height: 250px;" src = "pics/rose/7-rose.PNG"></img></p>
+			
+			<p align = "left">
+				<font face = "arial" size = "5">
+				The rose-petal is quite a broad idea, and I think attributing applications to it would be a stretch and ruin its beauty.  But there 
+				is one other way to visualize the curve, and that’s through gears of differing diameters and teeth numbers.
+				</font>
+			</p>
+			
+			<p align = "center">
+			<img src = "pics/rose/rose-gear-anim1.gif"></img>
+			<img src = "pics/rose/rose-gear-anim2.gif"></img>
+			<img src = "pics/rose/rose-gear-anim3.gif"></img>
+			<img src = "pics/rose/rose-gear-anim4.gif"></img>
+			</p>
+			<p align = "left">
+				<font face = "arial" size = "5">
+				Just admire how pretty that is.
+				</font>
+			</p>
+			<br>
+         </div>
+      </div>
+      <ul>
+         <li><a href = "rose.html">Rose Curve</a></li>
+         <li><a href = "cardioid.html">Cardioid</a></li>
+         <li><a href = "lemniscate.html">Lemniscate</a></li>
+         <form>
+            <button id = "backbutton" formaction = "../index.html"><i class="fa fa-arrow-left"></i>
+            </button>
+         </form>
+      </ul>
+   </body>
+</html>
