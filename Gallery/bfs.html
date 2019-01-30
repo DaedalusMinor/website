@@ -1,0 +1,115 @@
+<html>
+   <head>
+      <title>Breadth First Search</title>
+      <meta name="viewport">
+      <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <style>
+         ul {
+         position: absolute;
+         list-style-type: none;
+         width: 95%;
+         top: 0px;
+         height: 350px;
+         margin: 0;
+         padding: 0;
+         overflow: hidden;
+         }
+         li a {
+         font-size: 20px;
+         font-family: Arial, sans-serif;
+         letter-spacing: 3px;
+         float: right;
+         display: block;
+         color: black;
+         padding: 290px 50px;
+         text-decoration: none;
+         }
+         li a:hover {
+         color: orange;
+         }
+         #backbutton {
+         background-color: white;
+         border-radius: 100%;
+         border: 5px solid white;
+         color: black;
+         height: 50px;
+         width: 50px;
+         position: relative;
+         left: 90px;
+         font-size: 50px;
+         cursor: pointer;
+         float: left;
+         display: block;
+         }
+         #backbutton:hover {
+         color: orange;
+         }
+         #line{
+         width: 96%;
+         margin-left: 2%;
+         margin-right: 2%;
+         border: 2px solid black;
+         height: 4px;
+         }
+         p {
+         display: block;
+         margin-left: 2em;
+         margin-right: 2em;
+         }
+         .component{
+         position: absolute;
+         left: 0px;
+         top: 0px;
+         padding: 3em;
+         background: url("pics/opaque.jpg");
+         background-position: center;
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         }
+         .content{
+         padding: 1em;
+         background-color: white;
+         background-size: 100% 100%;
+         background-repeat: no-repeat;
+         }
+      </style>
+   </head>
+   <body margin="0" oncontextmenu="return false;">
+      <div class = "component">
+      <div class = "content">
+      <form>
+         <button id = "backbutton" formaction = "../index.html"><i class="fa fa-arrow-left"></i>
+         </button>
+      </form>
+      <p align="center"><font face="arial" size="19">More Math Stuff</font></p>
+      <img src="mitchprof.PNG" style="position:absolute; width:95px; height:95px; border-radius:50%; top:60px; left:900px; border:3px solid blue;"></img>
+      <div id = "line"></div>
+      <p align = "center">
+         <font face = "arial" size = "12">
+         Breadth Frist Search
+         </font>
+      </p>
+      <p align = "left">
+         <font face = "arial" size = "5">
+         As I have finally moved on from polar graphs, we're going to be covering a new subject, so I thought it would be appropriate to
+         experiment: I made a video.  In the video below, I'll be explaining the basic principles that this interactive program operates under.
+         The program is used for pathfinding, so each square displays an integer called a pathlength.  The pathlength just states how many steps
+         it will take to get from the square the integer is contained in, to the destination square.  This algorithm also accounts for boundaries,
+         which can be constructed/deconstructed on the grid by right-clicking on the specified square, and changing destination squares which can be done
+         by left-clicking.  Squares that can't be reached are colored randomly and given a path-length of zero.
+         </font>
+      </p>
+      <p align = "center">
+         <canvas id="canvas" height = "480px" width = "650px"></canvas>
+         <script src="swarm.js"></script>
+      </p>
+      <p align = "center">
+         <font face = "arial" size = "7">The Video!</font>
+         <br>
+         <iframe width="853" height="480" src="https://www.youtube.com/embed/H1efmRpbbgg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </p>
+   </body>
+</html>
