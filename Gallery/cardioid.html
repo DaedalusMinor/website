@@ -1,265 +1,157 @@
 <html>
-   <head>
-      <title>Polar Graphs - Cardioid</title>
-      <meta name="viewport">
-      <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-      <style>
-         ul {
-         position: absolute;
-         list-style-type: none;
-         width: 95%;
-         top: 0px;
-         height: 350px;
-         margin: 0;
-         padding: 0;
-         overflow: hidden;
-         }
-         li a {
-         font-size: 20px;
-         font-family: Arial, sans-serif;
-         letter-spacing: 3px;
-         float: right;
-         display: block;
-         color: black;
-         padding: 290px 50px;
-         text-decoration: none;
-         }
-         li a:hover {
-         color: orange;
-         }
-         #backbutton {
-         background-color: white;
-         border-radius: 100%;	
-         border: 5px solid white;  
-         color: black; 
-         height: 50px;
-         width: 50px;
-         position: relative;
-         top: 275px;
-         left: 90px;
-         font-size: 50px; 
-         cursor: pointer; 
-         float: left;
-         display: block;
-         }
-         #backbutton:hover {
-         color: orange;
-         }
-         #line{
-         width: 96%;
-         margin-left: 2%;
-         margin-right: 2%;
-         border: 2px solid black;
-         height: 4px;
-         }
-         p {
-         display: block;
-         margin-left: 2em;
-         margin-right: 2em;
-         }
-         .component{
-         position: absolute;
-         left: 0px;
-         top: 0px;
-         padding: 3em;
-         background: url("pics/opaque.jpg");
-         background-position: center;
-         background-size: cover;
-         background-repeat: no-repeat;
-         background-attachment: fixed;
-         }
-         .content{
-         padding: 1em;
-         background-color: white;
-         background-size: 100% 100%;
-         background-repeat: no-repeat;
-         }
-      </style>
-   </head>
-   <body>
-      <div class = "component">
-         <div class = "content">
-            <img src = "pics/header.png" style = "margin-right: 25%; margin-left: 25%; height: 220px; width: 50%;"></img>
-            <img src="mitchprof.PNG" style="position:absolute; width:95px; height:95px; border-radius:50%; top:60px; left:800px; border:3px solid blue;"></img>
-            <br>
-            <br>
-            <br>
-            <br>
-            <div id = "line"></div>
-            <p align = "center">
-               <font face = "arial" size = "12">
-               The Cardioid
-               </font>
-            </p>
-            <p align = "center">
-               <img height = "400px" width = "800px" style = "" src = "pics/cardioid/cardioid-right-white.png">
-            </p>
-            <p align = "center">
-               <font face = "arial" size = "6">
-               Some Background
-               </font>
-            </p>
-            <p align = "left">
-               <font face = "arial" size = "5">
-				I’ve been <img align = "right" style = "border: 4px solid gray;" src="pics/cardioid/mug.jpg"></img>told that the cardioid is called such because of its heart-like shape, but to me, if your heart looks the cross-section of an apple, 
-				you have bigger priorities to attend to than learning about math.  Anyways, the term was first coined by an Italian mathematician Giovanni 
-				Francesco Mauro Melchiorre Salvemini di Castiglione, and thankfully its construction is not as complicated as this guys name.  It’s a commonly
-				recurring shape, from the light reflected from a coffee mug, to pure math, to microphones.
-               </font>
-            </p>
-            <br>
-            <p align = "center">
-               <font face = "arial" size = "6">
-               The Math
-               </font>
-            </p>
-			<p align = "left">
-				<font face = "arial" size = "5">
-				To understand the Cardioid, we must first understand its two main components: the single-petal curve and the circle.  The circle is simple
-				in polar coordinates, since <i>r</i> represents radius, we just set it equal to a constant, say <i>r</i> = 1, and it will construct a figure with a 
-				constant distance from origin regardless of angle. 
-				</font>
-			</p>
-			<br>
-			<p align = "center"><img src = "pics/cardioid/circle-anim.gif"></img></p>
-			
-			<p align = "left">
-				<font face = "arial" size = "5">
-				Next is the single-petal, which is simply cos(&theta;), representing the horizontal component of a triangle in the unit circle as a smoothly 
-				changing distance from the origin.  Reminder, if the <i>r</i> value comes out as negative, it is still graphed with the same magnitude, just 
-				going in the opposite direction.  Thus it forms the shape of a circle, but just offset from the origin by its own radius:
-				</font>
-			</p>
-			<br>
-			<p align = "center"><img style = "width: 500px; height: 400px;" src = "pics/cardioid/cos-anim.gif"></img></p>
-			
-			<p align = "left">
-				<font face = "arial" size = "5">
-					Also note that there is no “radial scaling” relative to the circle and the single-petal, meaning that for every radian of input 
-					into one element, is one radian of input into the other.  To provide a counter-example, cos(2&theta;) would have two to one scaling 
-					relative to the circle, thus allowing it to “squeeze” more petals into the graph, which is a property that’s very important to the 
-					rose-petal curve.
-				</font>
-			</p>
-			<br>
-			<p align = "center"><img src="pics/cardioid/radial-scale.PNG"></img></p>
-			
-			<p align = "left">
-				<font face = "arial" size = "5">
-					Now mixing the constant, circular element with a changing, petal element would cause an interesting construction.  Imagine 
-					this: two circles of equal radius, one is at the origin and the other is offset so it just has one point of contact with the 
-					origin-circle.  Now mark the point at which the circles touch, and start to roll the outer circle around the circumference of 
-					the inner circle.  The path that the point makes is a cardioid!  This can be modeled as <i> r = a(1 + cos(&theta;))</i>, 
-					where <i>a</i> is some constant.  
-				</font>
-			</p>
-			<br>
-			<p align = "center"><img src="pics/cardioid/cardioid-anim.gif"></img></p>
-			
-			<p align = "left">
-				<font face = "arial" size = "5">
-					Note: a good way of bringing this into the real world would be to have two wheels of same size with a lot of traction.  Then, have 
-					one wheel stand still while the other revolves around it, and record the position of a single point on the outer wheel.  You will 
-					see a similar construction!
-					<br><br>
-					Now the inner circle represents the constant <i>r = a</i>, and the outer circle represents <i>r = a * cos(&theta;)</i>.  And this makes sense, since 
-					the outer circle and rose-petal would be the “dynamic” parts of the graph and the inner circle would just be the constant of the graph.  
-					The radial scaling is also important to note, since for every radian increased about the circle is equivalent to one radian of 
-					rotation about the outer circle.
-					<br><br>
-					I recommend playing around with this stuff to see the construction played out under different initial conditions.  There are 
-					multiple sub-shapes of the cardioid like the supercardioid  or the very general Limacon of pascal.
-				</font>
-			</p>
-			<br>
-			<p align = "center"><img src="pics/cardioid/experiment.PNG"></img></p>
-			
-			<p align = "center">
-				<font face = "arial" size = "6">
-					Cool Properties
-				</font>
-			</p>
-			<br>
-			<p align = "left">
-				<font face = "arial" size = "5">
-				Any chord going from the circumference of the cardioid, going through the cusp of the cardioid, and to the other end of 
-				the circumference will always have the same length of 4<i>a</i>.
-				</font>
-			</p>
-			<br>
-			<p align = "center"><img src = "pics/cardioid/chord-anim.gif"></img></p>
-			
-			<p align = "left">
-				<font face = "arial" size = "5">
-				These chords also have a midpoint tangent to the circumference of the circle r = a, so we can actually animate the circle 
-				into the cardioid’s construction in a different way.
-				</font>
-			</p>
-			<br>
-			<p align = "center"><img src = "pics/cardioid/midpoint.png"></img></p>
-			
-			<p align = "left">
-				<font face = "arial" size = "5">
-				The mathematical proof of this stuff is quite complicated, and involves the use of the complex plane, so i’ll just leave 
-				the wikipedia article <a href = "https://en.wikipedia.org/wiki/Cardioid">here</a> for whomever wants to take a crack at it
-				<br><br>
-				I’d also highly recommend <a href = "https://www.youtube.com/watch?v=OX12aOh9brw">this video </a> to get more visuals on the cardioid.
-				</font>
-			</p>
-			<br>
-			
-			<p align = "left">
-				<font face = "arial" size = "5">
-				The envelope of a pencil of lines can be used to construct a cardioid, which is basically using a bunch of lines to outline 
-				a cardioid shape.  My favorite way is using the modular multiplication circle technique, which is relatively simple to follow 
-				and quite artistic.
-				</font>
-			</p>
-			<br>
-			<p align = "center"><img src = "pics/cardioid/pencil.png"></img></p>
-			
-			<p align = "left">
-				<font face = "arial" size = "5">
-				The mandelbrot set is fractal shape made on the complex plane, using imaginary numbers as a vertical axis.  Just like Kim Kardashian, 
-				it’s quite famous for being so pretty, but unlike the Kardashians, it’s also famous for having a lot of depth.  What I mean is that you 
-				can infinitely zoom in on this shape, and still find noticeable patterns!  Anyways, the cardioid can be seen in the main body of the
-				mandelbrot set, and can even be found recursively throughout the set if you zoom in far enough.
-				</font>
-			</p>
-			<br>
-			<p align = "center"><img style = "width: 300px; height: 300px; border: 4px solid gray;" src = "pics/cardioid/mandelbrot-anim.gif"></img></p>
-			
-			<p align = "left">
-				<font face = "arial" size = "5">
-				The very basis of this-revolving-a-circle-around-another-circle idea is the principle behind the shapes of the epicycloid family
-				of curves.  The cardioid is just the simplest member of this family: there are plenty more shapes to discover!  It can even be 
-				found in the multibrot set, representing more petals as the degree of the function is increased 
-				</font>
-			</p>
-			<br>
-			<p align = "center"><img src = "pics/cardioid/epicycloid-anim.gif"></img></p>
-			
-			<p align = "left">
-				<font face = "arial" size = "5">
-				On a more engineering-basis, the cardioid can be found in multiple applications that relate to radiating signals, specifically, 
-				those with a direction.  Things like the intensity reception of a microphone can be modeled using a cardioid.
-				</font>
-			</p>
-			<br>
-			<p align = "center"><img src = "pics/cardioid/microphone.png"></img></p>
-			
-         </div>
-      </div>
-      <ul>
-         <li><a href = "rose.html">Rose Curve</a></li>
-         <li><a href = "cardioid.html">Cardioid</a></li>
-         <li><a href = "lemniscate.html">Lemniscate</a></li>
-         <form>
-            <button id = "backbutton" formaction = "../index.html"><i class="fa fa-arrow-left"></i>
-            </button>
-         </form>
-      </ul>
-   </body>
+<head>
+	<title>Polar Graphs - Lemniscate</title>
+	<meta name="viewport">
+	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+
+ul {
+	position: absolute;
+	list-style-type: none;
+	width: 95%;
+	top: 0px;
+	height: 350px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+
+}
+
+li a {
+	font-size: 20px;
+	font-family: Arial, sans-serif;
+	letter-spacing: 3px;
+	float: right;
+	display: block;
+	color: black;
+	padding: 290px 50px;
+	text-decoration: none;
+}
+
+li a:hover {
+	color: orange;
+}
+
+#backbutton {
+	background-color: white;
+	border-radius: 100%;
+	border: 5px solid white;
+	color: black;
+	height: 50px;
+	width: 50px;
+	position: relative;
+	top: 275px;
+	left: 90px;
+	font-size: 50px;
+	cursor: pointer;
+	float: left;
+	display: block;
+}
+
+#backbutton:hover {
+	color: orange;
+}
+
+#line{
+	width: 96%;
+	margin-left: 2%;
+	margin-right: 2%;
+	border: 2px solid black;
+	height: 4px;
+}
+p {
+    display: block;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.component{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	padding: 3em;
+	background: url("pics/opaque.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+}
+
+.content{
+	padding: 1em;
+	background-color: white;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+</style>
+</head>
+<body>
+
+<div class = "component">
+
+<div class = "content">
+<img src = "pics/header.png" style = "margin-right: 25%; margin-left: 25%; height: 220px; width: 50%;"></img>
+<img src="mitchprof.PNG" style="position:absolute; width:95px; height:95px; border-radius:50%; top:60px; right: 200px; border:3px solid blue;"></img>
+<br>
+<br>
+<br>
+<br>
+
+<div id = "line"></div>
+
+<p align = "center">
+	<font face = "arial" size = "12">
+		The Cardioid
+	</font>
+</p>
+
+<p align = "center">
+	<img height = "400px" width = "800px" style = "" src = "pics/cardioid-right-white.png">
+</p>
+
+
+<p align = "center">
+	<font face = "arial" size = "6">
+		Some Background
+	</font>
+</p>
+
+<p align = "left">
+	<font face = "arial" size = "5">
+	The Lemniscate  <img src = "pics/tarot.jpg" height = "300px" align = "right" style="">  is commonly known as the infinity symbol, representing eternity and balance.  It's direct origins
+	are unknown; our earliest records date back to ancient Egypt
+	and the Tibetan ouroboros.  The western use of the Lemniscate had existed mostly in religious paintings, usually on a Latin Cross.
+	But it's mathematical meaning comes from John Wallis, a 17th century mathematician, who used it to represent variables that grow arbitrarily large.  It came up
+	again in the 17th century when Jakob Bernoulli made a mathematically defined graph of the lemniscate by inverse transforming a hyperbola.
+	Now, we still retain the spiritual interpretation of the infinity symbol: on tattos on the wrists of 22-year-old white women and tarot card characters.
+	But I want to get into the mathematical meaning of the Lemniscate, and I want to make it more intuitive.  After this, I think that understanding the
+	math behind this symbol, will introduce a greater appreciation for its meaning.
+	</font>
+</p>
+
+<br>
+
+<p align = "center">
+	<font face = "arial" size = "6">
+		The Math: a Polar Look
+	</font>
+</p>
+	</div>
+</div>
+	<ul>
+
+		<li><a>Analemma</a></li>
+		<li><a>Rose Curve</a></li>
+		<li><a>Cardioid</a></li>
+		<li><a href = "lemniscate.html">Lemniscate</a></li>
+		<form>
+			<button id = "backbutton" formaction = "../index.html"><i class="fa fa-arrow-left"></i>
+			</button>
+		</form>
+	</ul>
+</body>
 </html>
