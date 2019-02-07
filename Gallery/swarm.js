@@ -36,10 +36,10 @@ class OpenSquare extends Square {
         super.render();
         ctx.fillStyle = "black";
         ctx.fillText("" + this.pathLength, this.x + globalWidth / 2, this.y + globalWidth / 2);
-        // ctx.beginPath();
-        // ctx.moveTo(this.x + globalWidth/2, this.y + globalWidth/2);
-        // ctx.lineTo(globalWidth * Math.cos(this.theta) + (this.x + globalWidth/2) , globalWidth * Math.sin(this.theta) + (this.y + globalWidth/2));
-        // ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(this.x + globalWidth/2, this.y + globalWidth/2);
+        ctx.lineTo(30 * Math.cos(this.theta) + (this.x + globalWidth/2) , 30 * Math.sin(this.theta) + (this.y + globalWidth/2));
+        ctx.stroke();
     }
 }
 
@@ -127,14 +127,54 @@ class Grid {
         var neighborSquares = [];
         for (var i = -1; i <= 1; i++) {
             for (var j = -1; j <= 1; j++) {
-                if (i != 0 && j != 0 && r + i != -1 && r + i != this.height && c + j != -1 && c + j != this.width && this.squares[(r + i) * this.width + (c + j)] instanceof Boundary) {
-                    neighborSquares.push((r + i) * this.width + (c + j));
+                if (r + i != -1 && r + i != this.height && c + j != -1 && c + j != this.width && this.squares[(r + i) * this.width + (c + j)] instanceof OpenSquare) {
+                    neighborSquares.push(grid.squares[(r + i) * this.width + (c + j)]);
                 }
             }
         }
-        return neighborSquares;
+
+        if(grid.squares[(r + 1) * this.width + c + 1] instanceof OpenSquare && grid.squares[(r + 1) * this.width + c] instanceof Boundary && grid.squares[r * this.width + c + 1] instanceof Boundary){
+          var x = neighborSquares.indexOf(grid.squares[(r + 1) * this.width + c + 1]);
+          neighborSquares.splice(x, 1);
+        }
+
+        if(grid.squares[(r + 1) * this.width + c - 1] instanceof OpenSquare && grid.squares[(r + 1) * this.width + c] instanceof Boundary && grid.squares[r * this.width + c - 1] instanceof Boundary){
+          var x = neighborSquares.indexOf(grid.squares[(r + 1) * this.width + c - 1]);
+          neighborSquares.splice(x, 1);
+        }
+
+        if(grid.squares[(r - 1) * this.width + c + 1] instanceof OpenSquare && grid.squares[(r - 1) * this.width + c] instanceof Boundary && grid.squares[r * this.width + c + 1] instanceof Boundary){
+          var x = neighborSquares.indexOf(grid.squares[(r - 1) * this.width + c + 1]);
+          neighborSquares.splice(x, 1);
+        }
+
+        if(grid.squares[(r - 1) * this.width + c - 1] instanceof OpenSquare && grid.squares[(r - 1) * this.width + c] instanceof Boundary && grid.squares[r * this.width + c - 1] instanceof Boundary){
+          var x = neighborSquares.indexOf(grid.squares[(r - 1) * this.width + c - 1]);
+          neighborSquares.splice(x, 1);
+        }
+
+      return neighborSquares;
     }
-}
+
+    calcTheta(c, r){
+      var neighborSquares = this.getNeighborSquares(c, r);
+      var minLength = 999999;
+      var minX = 0;
+      var minY= 0;
+      for(var k = 0; k < neighborSquares.length; k++){
+        if(neighborSquares[k].pathLength < minLength){
+          minLength = neighborSquares[k].pathLength;
+          minX = neighborSquares[k].x;
+          minY = neighborSquares[k].y;
+        }
+      }
+
+
+      var x = this.squares[r * width + c].x;
+      var y = this.squares[r * width + c].y;
+      return Math.atan2(minY - y, minX - x);
+    }
+  }
 
 var height = 10;
 var width = 10;
@@ -160,6 +200,7 @@ function main(c, r) {
     grid.breadthFirstSearch([grid.squares[r * width + c]]);
     for (var i = 0; i < height; i++) {
         for (var j = 0; j < width; j++) {
+            grid.squares[i * width + j].theta = grid.calcTheta(j, i);
             grid.squares[i * width + j].render();
         }
     }
