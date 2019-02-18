@@ -5,9 +5,23 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<style>
-		
+
+		ul {
+			position: absolute;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			overflow: hidden;
+		}
+
+		ul img {
+			float: right;
+			display: block;
+			padding: 26px 12px;
+		}
 			.rectangle{
-				height: 100%;
+				height: 860px;
 				width: 420px;
 				background-color: #555;
 				color: white;
@@ -15,17 +29,17 @@
 				font-size: 20px;
 				font-family: Arial, sans-serif;
 			}
-			
+
 			body {
 				background-image: url("pics/white-right.png");
 				background-repeat: no-repeat;
 				background-size: 100% 100%;
-				background-color: #cccccc;
+				background-color: #FFFFFF;
 				height:window.innerHeight;
 				width:window.innerWidth;
 			}
 			.block {
-				background-color: Black; 
+				background-color: Black;
 				position: absolute;
 				border: none; /* Remove borders */
 				color: white; /* White text */
@@ -37,13 +51,13 @@
 
 				font-family: Arial, sans-serif;
 			}
-			
+
 			.image{
-				position:absolute; 
-				width:200px; 
-				height:120px; 
+				position:absolute;
+				width:200px;
+				height:120px;
 			}
-			
+
 			.toprowimg{
 				top: 70px;
 			}
@@ -51,27 +65,27 @@
 			.toprowbutton{
 				top:200px;
 			}
-			
+
 			.middlerowimg{
 				top: 270px;
 			}
-			
+
 			.middlerowbutton{
 				top:400px;
 			}
-			
+
 			.bottomrowimg{
 				top:470px;
 			}
-			
+
 			.bottomrowbutton{
 				top: 600px;
 			}
-			
+
 			.block:hover {
 				background-color: DimGray;
 			}
-			
+
 			.whiteimg{
 				border: 2px solid #ddd;
 			}
@@ -89,15 +103,15 @@
 		About
 	</div>
 	<div class = "rectangle">
-	
+
 		<div class = "about">
 		<br><br></br></br>These are just some drawings that I've made through JavaScript, the code should viewable on my GitHub.  These are all just graphs of polar functions, which I think look cool
-		and have good mathematical meaning.  The cardioid, for instance, is made simply by having one circle roll around another, and tracing a specific point on the outer circle.  
+		and have good mathematical meaning.  The cardioid, for instance, is made simply by having one circle roll around another, and tracing a specific point on the outer circle.
 		They're also formed by time table circles and the mandelbrot set.  And I just think that the lemniscate should
-		be saved from the wrists of 22-year-old white women.  All of these were a challenge, because I had to use the Cartesian Coordinate system (x and y), instead of  a 
+		be saved from the wrists of 22-year-old white women.  All of these were a challenge, because I had to use the Cartesian Coordinate system (x and y), instead of  a
 		polar coordinate system (radius and angle).  So yeah, use them as backgrounds or something.
 		</div>
-		
+
 	</div>
 	<form><button formaction = "../index.html" style="
 				background-color: #555;
@@ -105,23 +119,23 @@
 				position: absolute;
 				top: 15px;
 				left: 20px;
-				
-				border: 5px solid white;  
-				color: white; 
+
+				border: 5px solid white;
+				color: white;
 				height: 55px;
 				width: 55px;
-				font-size: 35px; 
+				font-size: 35px;
 				cursor: pointer; "><i class="fa fa-arrow-left"></i></button></form>
 	<img class="image toprowimg" style = "left: 440px;" src = "pics/analemma-black.png"></img>
-	<a href = "pics/analemma-black.png" download> <button class="block toprowbutton" type="submit" style="left:440px;">Analemna-Black</button></a>
+	<a href = "pics/analemma-black.png" download> <button class="block toprowbutton" type="submit" style="left:440px;">Analemma-Black</button></a>
 	<img class="image toprowimg whiteimg" style = "left: 660px;" src = "pics/analemma-white.png"></img>
-	<a href = "pics/analemma-white.png" download> <button class="block toprowbutton" type="submit" style="left:660px;">Analemna-White</button></a>
+	<a href = "pics/analemma-white.png" download> <button class="block toprowbutton" type="submit" style="left:660px;">Analemma-White</button></a>
 	<img class="image toprowimg" style = "left: 880px;" src = "pics/lemniscate-black.png"></img>
 	<a href = "pics/lemniscate-black.png" download> <button class="block toprowbutton" type="submit" style="left:880px;">Lemniscate-Black</button></a>
 	<img class="image toprowimg whiteimg" style = "left: 1100px;" src = "pics/lemniscate-white.png"></img>
 	<a href = "pics/lemniscate-white.png" download> <button class="block toprowbutton" type="submit" style="left:1100px;">Lemniscate-White</button></a>
-	
-	
+
+
 	<img class="image middlerowimg" style = "left: 440px;" src = "pics/cardioid-right-black.png"></img>
 	<a href = "pics/cardioid-right-black.png" download> <button class="block middlerowbutton" type="submit" style="left:440px;">Cardioid1-Black</button></a>
 	<img class="image middlerowimg whiteimg" style = "left: 660px;" src = "pics/cardioid-right-white.png"></img>
@@ -131,7 +145,7 @@
 	<img class="image middlerowimg whiteimg" style = "left: 1100;" src = "pics/cardioid-white.png"></img>
 	<a href = "pics/cardioid-white.png" download> <button class="block middlerowbutton" type="submit" style="left:1100px;">Cardioid2-White</button></a>
 
-	
+
 	<img class="image bottomrowimg whiteimg" style = "left: 440px;" src = "pics/white-right.png"></img>
 	<a href = "pics/white-right.png" download> <button class="block bottomrowbutton" type="submit" style="left:440px;">Lemniscate-Right</button></a>
 	<img class="image bottomrowimg" style = "left: 660px;" src = "pics/lemniscateHorizontal.png"></img>
@@ -140,7 +154,15 @@
 	<a href = "pics/phoneLemniscate.png" download> <button class="block bottomrowbutton" type="submit" style="left:880px;">Lemni-Phone-Back</button></a>
 	<img class="image bottomrowimg" style = "left: 1100px;" src = "pics/lemniscate-background.png"></img>
 	<a href = "pics/lemniscate-right.png" download> <button class="block bottomrowbutton" type="submit" style="left:1100px;">Lemniscate-Desktop</button></a>
-	
+
+	<img class="image whiteimg" style = "left: 440px; top:670px;" src = "pics/euler-white.png"></img>
+  <a href = "pics/euler-white.png" download> <button class="block" type="submit" style="left:440px; top:800px;">Euler-White</button></a>
+	<img class="image" style = "left: 660px; top:670px;" src = "pics/euler-black.png"></img>
+	<a href = "pics/euler-black.png" download> <button class="block" type="submit" style="left:660px; top:800px">Euler-Black</button></a>
+	<img class="image whiteimg" style = "left: 880px; top:670px;"  src = "pics/kepler-white.png"></img>
+	<a href = "pics/kepler-white.png" download> <button class="block" type="submit" style="left:880px; top:800px">Kepler-White</button></a>
+	<img class="image" style = "left: 1100px; top:670px;" src = "pics/kepler-black.png"></img>
+  <a href = "pics/kepler-black.png" download> <button class="block" type="submit" style="left:1100px; top:800px">Kepler-Black</button></a>
 
 </body>
 </html>
