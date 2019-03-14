@@ -9,7 +9,7 @@
 		request.send();
 
 		request.onload = function () {
-			var jObj = request.response();
+			var jObj = request.response;
 			var string = "" + jObj['type'];
 			console.log(string);
 		}
