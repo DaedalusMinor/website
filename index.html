@@ -1,157 +1,135 @@
 <html>
 	<head>
-	<title>Mitch Witt</title>
+	<title>About</title>
 	<meta name="viewport">
 	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<style>
-
-			.btn{
-				background-color: Gray;
-				border-radius: 100%;
-				position: fixed;
-				top: 85%;
-
-				border: none;
-				color: white;
-				height: 75px;
-				width: 75px;
-				font-size: 40px;
-				cursor: pointer;
-			}
-
-			.btn:hover {
-				background-color: DimGray;
-			}
-
-			.Insta{
-				right: 490px;
-			}
-
-			.Face {
-				right: 595px;
-			}
-
-			.Snap {
-				right: 700px;
-			}
-
-			.Git {
-				right: 805px;
-			}
-
-			.block {
-				background-color: Black;
-				position: absolute;
-				border: none; /* Remove borders */
-				color: white; /* White text */
-				font-size: 25px; /* Set a font size */
-				cursor: pointer; /* Mouse pointer on hover */
-				letter-spacing: 3px;
-				font-family: Arial, sans-serif;
-				height: 45px;
-			}
-
-			.block:hover {
-				background-color: #3C4B51;
-			}
-
-			.games{
-				width: 175px;
-				bottom: 220px;
-				left: 30px;
-			}
-
-			.math{
-				width: 175px;
-				bottom: 160px;
-				font-size: 18px;
-				left: 30px;
-			}
-
-			.gallery{
-				left: 1000px;
-				top: 280px;
-				width: 300px;
-			}
-
-			.fractal{
-				left: 30px;
-				bottom: 100px;
-				width: 225px;
-				font-size: 15px;
-			}
-
-			.SupQuote{
-				font-family: "Times New Roman", Times, sans-serif;
-				letter-spacing: 5px;
-				color:white;
-				font-size: 30px;
-				position:absolute;
-				top: 50px;
-				left: 50px;
-			}
-
-			.MitchQuote{
-				font-family: "Times New Roman", Times, sans-serif;
-				letter-spacing: 5px;
-				color:black;
-				font-size: 27px;
-				position:absolute;
-				bottom: 120px;
-				right: 25px;
-			}
-
-			.AboutHeader{
-				font-family: Arial, sans-serif;
-				letter-spacing: 3px;
-				color:white;
-				font-size: 25px;
-				position:absolute;
-				top: 200px;
-				left: 30px;
-			}
-
-			.About{
-				font-family: Arial, sans-serif;
-				letter-spacing: 2px;
-				color:white;
-				font-size: 20px;
-				position:absolute;
-				top: 250px;
-				left: 30px;
-			}
-
 			body {
-				background-image: url("lemniInver.png");
 				background-repeat: no-repeat;
 				background-size: 100% 100%;
 				background-color: #cccccc;
 				height:100%;
 				width:100%;
 			}
+
+			.btn{
+				background-color: Gray;
+				border-radius: 100%;
+				border: none;
+				color: white;
+				height: 75px;
+				width: 75px;
+				font-size: 40px;
+				cursor: pointer;
+				margin-left: 12px;
+				margin-right: 12px;
+			}
+
+			.btn:hover {
+				background-color: DimGray;
+			}
+
+			.block {
+				background-color: Black;
+				border: none; /* Remove borders */
+				color: white; /* White text */
+				font-size: 15px; /* Set a font size */
+				cursor: pointer; /* Mouse pointer on hover */
+				letter-spacing: 3px;
+				font-family: Arial, sans-serif;
+				height: 45px;
+				width: 225px;
+				margin-top: 10px;
+			}
+
+			.block:hover {
+				background-color: #3C4B51;
+			}
+
+			#supQuote{
+				font-family: "Times New Roman", Times, sans-serif;
+				letter-spacing: 5px;
+				color:white;
+				font-size: 30px;
+			}
+
+			#mitchQuote{
+				font-family: "Times New Roman", Times, sans-serif;
+				letter-spacing: 5px;
+				color:black;
+				font-size: 27px;
+				position: absolute;
+				width: 400px;
+			}
+
+			#about{
+				font-family: Arial, sans-serif;
+				letter-spacing: 2px;
+				color:white;
+				font-size: 20px;
+				position:absolute;
+			}
+
+			#triangle {
+				width: 0px;
+				height: 0px;
+				left: 0;
+				top: 0;
+				position: absolute;
+				opacity: 0.9;
+				z-index: -50;
+			}
+
+			#buttonList {
+				list-style-type: none;
+				display: inline-block;
+				position: absolute;
+				margin-left: -40px;
+			}
+
 		</style>
 	</head>
-<body>
-	<script src = "mitchwitt.js"></script>
-	<canvas id="canvas" width="0" height="0"></canvas>
-	<img name="slide" style = "position:absolute; height:150px; width:300px; top:120px; left:1000px;" ></img>
-	<img src="Tyler.jpg" style=" position:absolute; width:95px; height:95px; border-radius:50%; top:110px; left:430px; border:3px solid red;"></img>
-	<img src="mitchprof.PNG" style="position:absolute; width:95px; height:95px; border-radius:50%; bottom:50px; right:70px; border:3px solid blue;"></img>
-	<form>
-		<button formaction = "https://www.instagram.com/mitchw1tt/" class="btn Insta"><i class="fa fa-instagram"></i></button>
-		<button formaction = "https://www.facebook.com/mitchell.witt.12" class="btn Face"><i class="fa fa-facebook"></i></button>
-		<button formaction = "https://www.snapchat.com/add/mitchsmorin" class="btn Snap"><i class="fa fa-snapchat"></i></button>
-		<button formaction = "https://github.com/DaedalusMinor" class="btn Git"><i class="fa fa-github"></i></button>
-		<button formaction = "Games/index.html" class="block games">My Games</button>
-		<button formaction = "Gallery/mathstuff.html" class="block math">Math Stuff</button>
-		<button formaction = "Fractal/fractaltree.html" class="block fractal">Make Your Own Tree!</button>
-		<button formaction = "Gallery/galleryIndex.html" class="block gallery">Images</button>
-	</form>
-	<div class="SupQuote">"I'm Big Mac.  I'm quarter-pound.  You chicken nugget."<br>- Tyler, The Creator</br> </div>
-	<div class="AboutHeader"><u>About</u></div>
-	<div class="About">Hi, I'm Mitchell Witt.  This is my website where I link my social<br> media and other projects such as my games.  Hopefully this <br> website will constantly change, as will my interests, <br> so take it for what it's worth.</br></br></br></div>
-	<div class="MitchQuote">"Lemniscates look cool."<br> - Mitchell Witt</br></div>
-</body>
+	<body>
+		<svg style="z-index: -99;"></svg>
+		<script src = "https://d3js.org/d3.v5.js"></script>
+		<script src = "lemniscate.js"></script>
+		<div style = "z-index: 1; position:absolute; top:120px; left:1000px;">
+			<img name="slide" src = "Gallery/pics/lemniscate-black.png" style = "height:150px; width:300px;"></img>
+			<a href = "Gallery/galleryIndex.html"><button style = "width: 300px; margin-left: 0px;" class="block">Images</button></a>
+		</div>
+
+		<div style = "z-index: 1; position: absolute; top: 25px; left: 50px; width: 50%;">
+			<div id="supQuote" style = "width: 1000px;">"I'm Big Mac.  I'm quarter-pound.  You chicken nugget."
+				<img src="Tyler.jpg" style="width:95px; height:95px; border-radius:50%; border:3px solid red;"></img>
+				 - Tyler, The Creator</div>
+			<br>
+			<div id="about">Hi, I'm Mitchell Witt.  This is my website where I link my social media and other projects such
+				 as my games.  Hopefully this website will constantly change, as will my interests, so take it for what it's worth.
+				 <form>
+					 <ul id = "buttonList">
+						 <li><button formaction = "Games/index.html" class="block">My Games</button></li>
+						 <li><button formaction = "Gallery/mathstuff.html" class="block">Math Stuff</button></li>
+						 <li><button formaction = "Fractal/fractaltree.html" class="block">Make Your Own Tree!</button></li>
+					 </ul>
+				 </form>
+			</div>
+		</div>
+
+		<div id="mitchQuote">
+			"Lemniscates look cool."<br> - Mitchell Witt</br>
+			<img src="mitchprof.PNG" style="position: static; width:95px; height:95px; border-radius:50%; margin-left: 250px; border:3px solid blue;"></img>
+		</div>
+		<br>
+		<div id="socialmedia" style = "z-index: 1; text-align: center; display: inline-block; bottom: 35px; position: fixed; width: 100%;">
+			<form style = "height: 40px; margin-left: auto; margin-right: auto;">
+					<button formaction = "https://www.instagram.com/mitchw1tt/" class="btn"><i class="fa fa-instagram"></i></button>
+					<button formaction = "https://www.facebook.com/mitchell.witt.12" class="btn"><i class="fa fa-facebook"></i></button>
+					<button formaction = "https://www.snapchat.com/add/mitchsmorin" class="btn"><i class="fa fa-snapchat"></i></button>
+					<button formaction = "https://github.com/DaedalusMinor" class="btn"><i class="fa fa-github"></i></button>
+			</form>
+		</div>
+		<script src = "mitchwitt.js"></script>
+	</body>
 </html>
