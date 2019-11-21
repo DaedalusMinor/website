@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<style>
+
 			body {
 				background-image: url("lemniInver.png");
 				background-repeat: no-repeat;
@@ -13,34 +14,71 @@
 				height:window.innerHeight;
 				width:window.innerWidth;
 			}
-			.btn4Pong {
-				background-color: Black; 
+
+			.btn {
+				background-color: Black;
 				position: absolute;
 				border: none; /* Remove borders */
 				color: white; /* White text */
 				height: 45px;
 				width: 200px;
+				margin: 5px;
 				font-size: 25px; /* Set a font size */
 				cursor: pointer; /* Mouse pointer on hover */
 				letter-spacing: 3px;
-				top:61%;
-				left: 43%;
 				font-family: Arial, sans-serif;
 			}
 
-			.btn4Pong:hover {
+			.btn:hover {
 				background-color: DimGray;
 			}
-			
 
+			.game {
+				width: 200px;
+				height: 200px;
+				margin: 30px;
+			}
+
+			.gamethumbnail {
+				margin: 5px;
+				width: 200px;
+				height: 80%;
+			}
+
+			.container {
+				text-align: center;
+				width: 100%;
+				height: 100%;
+				margin-top: auto;
+				margin-bottom: auto;
+				display: inline-block;
+			}
+
+			#links {
+				list-style-type: none;
+				margin: auto;
+				padding: 0;
+			}
+
+			ul > div {
+				display: inline-block;
+			}
 
 		</style>
 	</head>
 <body>
 	<canvas id="canvas" width="0" height="0"></canvas>
-	<img src="4pong.png" style=" position:absolute; width:200px; height:120px; top:42%; left:43%;"></img>
-	<form>
-		<button formaction = "4PongProj/4Pong.html" class="btn4Pong">4Pong</button>
-	</form>
+	<div class="container">
+		<ul id="links">
+			<div class="game">
+				<img src="4pong.png" class = "gamethumbnail"></img>
+				<form style="width: 0;"><button formaction = "4PongProj/4Pong.html" class="btn">4Pong</button></form>
+			</div>
+			<div class="game">
+				<img src="Gravvi.png" class = "gamethumbnail"></img>
+				<form style="width: 0;"><button formaction = "http://gravvi.space" class="btn">Gravvi</button></form>
+			</div>
+		</ul>
+	</div>
 </body>
 </html>
